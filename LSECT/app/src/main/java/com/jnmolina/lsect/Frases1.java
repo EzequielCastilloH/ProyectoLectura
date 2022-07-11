@@ -36,22 +36,22 @@ public class Frases1 extends AppCompatActivity {
         btnBack = (ImageButton) findViewById(R.id.btnBackPhrases);
 
         //Enviando títulos de las frases como ObjectList hacia el ArrayList
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "¡Buenos días!"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "¡Buenas tardes!"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "¡Buenas noches!"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
-        listArrayPhrases.add(new ObjectList(R.drawable.anadir, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "¡Buenos días!"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "¡Buenas tardes!"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "¡Buenas noches!"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
+        listArrayPhrases.add(new ObjectList(R.drawable.play, "BUHO"));
 
 
         //Adaptando el envío de datos
