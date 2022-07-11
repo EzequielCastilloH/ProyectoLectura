@@ -51,7 +51,7 @@ public class Animacion extends AppCompatActivity {
         video.setMediaController(controller);
         controller.setAnchorView(video);
 
-        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/pinheads-f0e32.appspot.com/o/0001-0250.avi?alt=media&token=beb2b4db-cf95-4a23-a5a7-aefc50f829d3");
+        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/pinheads-f0e32.appspot.com/o/0001-0250.mp4?alt=media&token=0aa88a53-c03c-43e1-94f4-ee5668a0c80d");
         video.setVideoURI(uri);
         video.start();
 
