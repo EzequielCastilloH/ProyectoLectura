@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Animacion">
+
+    <Button
+        android:id="@+id/btnNextAnimation"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="@color/color7"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Siguiente"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtPhraseExplanation"
+        android:layout_width="260dp"
+        android:layout_height="67dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Aprende a comunicarte en lenguaje de señas según el contexto en el que te encuentres"
+        android:textAlignment="gravity"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhrase"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <TextView
+        android:id="@+id/txtModule"
+        android:layout_width="85dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Saludos"
+        android:textAlignment="center"
+        android:textColor="@color/color7"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPhrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <TextView
+        android:id="@+id/txtPhrase"
+        android:layout_width="312dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="TextView"
+        android:textColor="@color/color7"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="339dp"
+        android:layout_height="234dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnRepeatAnimation"
+        android:layout_width="68dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/color7"
+        android:src="@drawable/repetir"
+        app:circularflow_defaultRadius="20px"
+        app:circularflow_radiusInDP="20px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="62dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#00FF8400"
+        android:src="@drawable/flecha_izquierda"
+        app:layout_constraintBottom_toTopOf="@+id/txtPhrase"
+        app:layout_constraintEnd_toStartOf="@+id/txtModule"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "458729309596",
+    "project_id": "prueba1-5ca29",
+    "storage_bucket": "prueba1-5ca29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458729309596:android:2c7e979a0869435857f459",
+        "android_client_info": {
+          "package_name": "com.jnmolina.lsect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458729309596-3kl7v0f7sucjbrkn97l6l31bocoir8p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVwtfVx5KpWVp6PcZcI5WTvPdtMkltGnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458729309596-3kl7v0f7sucjbrkn97l6l31bocoir8p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

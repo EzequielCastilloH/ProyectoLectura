@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgCharge"
+        android:layout_width="306dp"
+        android:layout_height="358dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117"
+        app:srcCompat="@drawable/img_charge" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#FF8400"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Comenzar"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCharge"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <TextView
+        android:id="@+id/txtTitlePhrase1"
+        android:layout_width="312dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Lets say: Everybody "
+        android:textColor="@color/color7"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSubtitleExplanation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCharge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtTitlePhrase2"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="can Talk"
+        android:textColor="@color/color7"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSubtitleExplanation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitlePhrase1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtSubtitleExplanation"
+        android:layout_width="260dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/averia_sans_libre_bold"
+        android:text="Aprende a comunicarte en lenguaje de señas según el contexto en el que te encuentres"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCharge"
+        app:layout_constraintVertical_bias="0.925" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
