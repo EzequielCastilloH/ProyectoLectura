@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:text="Aprende a comunicarte en lenguaje de señas según el contexto en el que te encuentres"
         android:textAlignment="gravity"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintBottom_toTopOf="@+id/video"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.284"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.138" />
 
     <VideoView
-        android:id="@+id/videoView"
+        android:id="@+id/video"
         android:layout_width="339dp"
         android:layout_height="234dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton

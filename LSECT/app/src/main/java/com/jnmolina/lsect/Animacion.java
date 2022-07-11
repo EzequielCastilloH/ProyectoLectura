@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +27,9 @@ public class Animacion extends AppCompatActivity {
     Integer position;
     private ListView listPhrases;
     private List<String> listArrayPhrases = new ArrayList<>();
+
+    VideoView video;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +44,16 @@ public class Animacion extends AppCompatActivity {
         listArrayPhrases = (ArrayList<String>) getIntent().getSerializableExtra("ArrayPhrases");
         position = getIntent().getIntExtra("position",0);
         txtPhrase.setText(phrase);
+
+        MediaController controller = new MediaController(this);
+
+        video = findViewById(R.id.video);
+        video.setMediaController(controller);
+        controller.setAnchorView(video);
+
+        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/pinheads-f0e32.appspot.com/o/0001-0250.avi?alt=media&token=beb2b4db-cf95-4a23-a5a7-aefc50f829d3");
+        video.setVideoURI(uri);
+        video.start();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
