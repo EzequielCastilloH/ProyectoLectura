@@ -55,6 +55,7 @@ public class Animacion extends AppCompatActivity {
         video.setVideoURI(uri);
         video.start();
 
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

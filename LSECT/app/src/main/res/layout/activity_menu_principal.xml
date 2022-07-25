@@ -110,7 +110,7 @@
                             android:textStyle="bold"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:text="Despedidas"
+                            android:text="Modales"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -233,6 +233,8 @@
             </GridLayout>
 
         </ScrollView>
+
+
 
     </LinearLayout>
 

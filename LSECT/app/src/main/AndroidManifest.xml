@@ -4,7 +4,7 @@
     package="com.jnmolina.lsect">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +17,18 @@
         android:theme="@style/Theme.LSECT"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".testslect_escuela"
+            android:exported="false" />
+        <activity
+            android:name=".testslect_tienda"
+            android:exported="false" />
+        <activity
+            android:name=".testsslsect_modales"
+            android:exported="false" />
+        <activity
+            android:name=".testslsect_saludos"
+            android:exported="false" />
         <activity
             android:name=".Animacion"
             android:exported="false" />

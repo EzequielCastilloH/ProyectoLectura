@@ -88,7 +88,11 @@ public class Frases1 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 for (int i = 0; i < listArrayPhrases.size(); i++) {
-                    if (position == i) {
+                    if(position == listArrayPhrases.size() - 1){
+
+                        Intent myIntent = new Intent(Frases1.this, testslsect_saludos.class);
+                        startActivity(myIntent);
+                    }else if (position == i) {
                         Intent myIntent = new Intent(Frases1.this, Animacion.class);
                         myIntent.putExtra("phrase",listArrayPhrases.get(position).getPhraseTitle());
                        // myIntent.putExtra("phrase",listArrayPhrases.get(position));
@@ -97,6 +101,7 @@ public class Frases1 extends AppCompatActivity {
 
                         startActivity(myIntent);
                     }
+
                 }
 
             }

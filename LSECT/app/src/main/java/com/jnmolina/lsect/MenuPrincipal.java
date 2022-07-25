@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class MenuPrincipal extends AppCompatActivity {
     private GridView grid;
     Button btnNextPage;
+    Button btnSaludos;
 
     ArrayList<String> nameSituation = new ArrayList<>();
     ArrayList<Integer> imgSituation = new ArrayList<>();
@@ -38,6 +39,7 @@ public class MenuPrincipal extends AppCompatActivity {
         grid.setAdapter(adapter);*/
 
         btnNextPage = (Button) findViewById(R.id.btnTry1);
+
         btnNextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,10 +48,10 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         });
 
+      
 
 
 
     }
-
 
 }
