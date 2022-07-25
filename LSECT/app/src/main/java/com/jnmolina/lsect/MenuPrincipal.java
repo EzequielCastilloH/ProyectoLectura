@@ -12,8 +12,7 @@ import java.util.ArrayList;
 
 public class MenuPrincipal extends AppCompatActivity {
     private GridView grid;
-    Button btnNextPage;
-    Button btnSaludos;
+    Button btnSaludos, btnModales, btnEscuela, btnTienda;
 
     ArrayList<String> nameSituation = new ArrayList<>();
     ArrayList<Integer> imgSituation = new ArrayList<>();
@@ -38,12 +37,39 @@ public class MenuPrincipal extends AppCompatActivity {
         GridAdapter adapter = new GridAdapter();
         grid.setAdapter(adapter);*/
 
-        btnNextPage = (Button) findViewById(R.id.btnTry1);
+        btnSaludos = (Button) findViewById(R.id.btnTry1);
+        btnModales = findViewById(R.id.btnTry2);
+        btnEscuela = findViewById(R.id.btnTry3);
+        btnTienda = findViewById(R.id.btnTry4);
 
-        btnNextPage.setOnClickListener(new View.OnClickListener() {
+        btnSaludos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent btnNextPage = new Intent(MenuPrincipal.this, Frases1.class);
+                startActivity(btnNextPage);
+            }
+        });
+
+        btnModales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnNextPage = new Intent(MenuPrincipal.this, Frases2.class);
+                startActivity(btnNextPage);
+            }
+        });
+
+        btnEscuela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnNextPage = new Intent(MenuPrincipal.this, Frases3.class);
+                startActivity(btnNextPage);
+            }
+        });
+
+        btnTienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnNextPage = new Intent(MenuPrincipal.this, Frases4.class);
                 startActivity(btnNextPage);
             }
         });

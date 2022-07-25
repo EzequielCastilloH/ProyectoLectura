@@ -5,38 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.Tag;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.EventListener;
-import java.util.List;
-import java.util.Objects;
 
-public class Frases1 extends AppCompatActivity {
+public class Frases3 extends AppCompatActivity {
 
     private ListView listPhrases;
 
@@ -50,21 +36,21 @@ public class Frases1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frases1);
+        setContentView(R.layout.activity_frases3);
         listPhrases = findViewById(R.id.listPhrases);
         btnBack = (ImageButton) findViewById(R.id.btnBackPhrases);
 
-        db.collection("frases1").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("frases3").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()){
-                    for (QueryDocumentSnapshot document : task.getResult()){
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
                         String frase = document.getData().get("frase").toString();
                         String url = document.getData().get("url").toString();
-                        Log.d("Dato",document.getId() + " => " + frase + " " + url);
+                        Log.d("Dato", document.getId() + " => " + frase + " " + url);
 
-                        listArrayPhrases.add(new ObjectList(R.drawable.play, frase, url, "Saludos"));
+                        listArrayPhrases.add(new ObjectList(R.drawable.play, frase, url, "Escuela"));
 
                     }
                 } else {
@@ -74,7 +60,7 @@ public class Frases1 extends AppCompatActivity {
 
                 //Adaptando el envío de datos
 
-                listPhrases.setAdapter(new AdaptadorLista(Frases1.this, R.layout.listview,listArrayPhrases){
+                listPhrases.setAdapter(new AdaptadorLista(Frases3.this, R.layout.listview, listArrayPhrases) {
                     @Override
                     public void onEntrada(Object entrada, View view) {
                         TextView texto_superior_entrada = (TextView) view.findViewById(R.id.txtPhraseTitle);
@@ -95,16 +81,16 @@ public class Frases1 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 for (int i = 0; i < listArrayPhrases.size(); i++) {
-                    if(position == listArrayPhrases.size() - 1){
+                    if (position == listArrayPhrases.size() - 1) {
 
-                        Intent myIntent = new Intent(Frases1.this, testslsect_saludos.class);
+                        Intent myIntent = new Intent(Frases3.this, testslsect_saludos.class);
                         startActivity(myIntent);
-                    }else if (position == i) {
-                        Intent myIntent = new Intent(Frases1.this, Animacion.class);
-                        myIntent.putExtra("phrase",listArrayPhrases.get(position).getPhraseTitle());
-                       // myIntent.putExtra("phrase",listArrayPhrases.get(position));
-                       // myIntent.putExtra("ArrayPhrases", (Serializable) listArrayPhrases);
-                        myIntent.putExtra("position",position);
+                    } else if (position == i) {
+                        Intent myIntent = new Intent(Frases3.this, Animacion.class);
+                        myIntent.putExtra("phrase", listArrayPhrases.get(position).getPhraseTitle());
+                        // myIntent.putExtra("phrase",listArrayPhrases.get(position));
+                        // myIntent.putExtra("ArrayPhrases", (Serializable) listArrayPhrases);
+                        myIntent.putExtra("position", position);
                         myIntent.putExtra("url", listArrayPhrases.get(position).getUrl());
                         myIntent.putExtra("class", listArrayPhrases.get(position).getPhraseClass());
 
@@ -119,7 +105,7 @@ public class Frases1 extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent btnBack = new Intent(Frases1.this, MenuPrincipal.class);
+                Intent btnBack = new Intent(Frases3.this, MenuPrincipal.class);
                 startActivity(btnBack);
             }
         });

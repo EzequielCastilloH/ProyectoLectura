@@ -117,6 +117,7 @@
                         </TextView>
 
                         <Button
+                            android:id="@+id/btnTry2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorPrimary"
@@ -167,6 +168,7 @@
                         </TextView>
 
                         <Button
+                            android:id="@+id/btnTry3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorPrimary"
@@ -216,6 +218,7 @@
                         </TextView>
 
                         <Button
+                            android:id="@+id/btnTry4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorPrimary"
