@@ -83,7 +83,7 @@ public class Frases2 extends AppCompatActivity {
                 for (int i = 0; i < listArrayPhrases.size(); i++) {
                     if (position == listArrayPhrases.size() - 1) {
 
-                        Intent myIntent = new Intent(Frases2.this, testslsect_saludos.class);
+                        Intent myIntent = new Intent(Frases2.this, testsslsect_modales.class);
                         startActivity(myIntent);
                     } else if (position == i) {
                         Intent myIntent = new Intent(Frases2.this, Animacion.class);

@@ -18,6 +18,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".pruebaboton"
+            android:exported="false"
+            android:label="@string/title_activity_pruebaboton"
+            android:theme="@style/Theme.LSECT.NoActionBar" />
+        <activity
             android:name=".Frases4"
             android:exported="false" />
         <activity
