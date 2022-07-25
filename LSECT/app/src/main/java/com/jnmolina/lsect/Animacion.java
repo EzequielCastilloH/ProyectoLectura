@@ -20,7 +20,7 @@ import java.util.List;
 
 public class Animacion extends AppCompatActivity {
 
-    String phrase;
+    String phrase, url;
     ImageButton btnBack, btnRepeatAnimation;
     Button btnNextAnimation;
     TextView txtPhrase;
@@ -41,6 +41,7 @@ public class Animacion extends AppCompatActivity {
         btnNextAnimation = (Button) findViewById(R.id.btnNextAnimation);
 
         phrase = getIntent().getStringExtra("phrase");
+        url = getIntent().getStringExtra("url");
         listArrayPhrases = (ArrayList<String>) getIntent().getSerializableExtra("ArrayPhrases");
         position = getIntent().getIntExtra("position",0);
         txtPhrase.setText(phrase);
@@ -51,7 +52,7 @@ public class Animacion extends AppCompatActivity {
         video.setMediaController(controller);
         controller.setAnchorView(video);
 
-        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/pinheads-f0e32.appspot.com/o/0001-0250.mp4?alt=media&token=0aa88a53-c03c-43e1-94f4-ee5668a0c80d");
+        Uri uri = Uri.parse(url);
         video.setVideoURI(uri);
         video.start();
 
@@ -73,15 +74,15 @@ public class Animacion extends AppCompatActivity {
                 startActivity(btnNextAnimation);
             }
         });
-
+            */
         btnRepeatAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                video.start();
             }
         });
 
-         */
+
 
 
 

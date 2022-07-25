@@ -61,14 +61,17 @@ public class Frases1 extends AppCompatActivity {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()){
                         String frase = document.getData().get("frase").toString();
-                        Log.d("Dato",document.getId() + " => " + frase);
+                        String url = document.getData().get("url").toString();
+                        Log.d("Dato",document.getId() + " => " + frase + " " + url);
 
-                        listArrayPhrases.add(new ObjectList(R.drawable.play, frase));
+                        listArrayPhrases.add(new ObjectList(R.drawable.play, frase, url));
 
                     }
                 } else {
                     Log.w("Error", "Error", task.getException());
                 }
+
+
                 //Adaptando el envío de datos
 
                 listPhrases.setAdapter(new AdaptadorLista(Frases1.this, R.layout.listview,listArrayPhrases){
@@ -76,9 +79,11 @@ public class Frases1 extends AppCompatActivity {
                     public void onEntrada(Object entrada, View view) {
                         TextView texto_superior_entrada = (TextView) view.findViewById(R.id.txtPhraseTitle);
                         ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imgPlay);
+                        String videoUrl = null;
 
                         texto_superior_entrada.setText(((ObjectList) entrada).getPhraseTitle());
                         imagen_entrada.setImageResource(((ObjectList) entrada).getIdImage());
+                        videoUrl = ((ObjectList) entrada).getUrl();
                     }
                 });
             }
@@ -98,6 +103,7 @@ public class Frases1 extends AppCompatActivity {
                        // myIntent.putExtra("phrase",listArrayPhrases.get(position));
                        // myIntent.putExtra("ArrayPhrases", (Serializable) listArrayPhrases);
                         myIntent.putExtra("position",position);
+                        myIntent.putExtra("url", listArrayPhrases.get(position).getUrl());
 
                         startActivity(myIntent);
                     }
